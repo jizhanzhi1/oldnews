@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<style>
+
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  text-align:center;
+}
+
+p {
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    color: #666666;
+
+}
+
+{
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+input[id=advance] {
+  padding: 5px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 5%;
+  background: #f1f1f1;
+  text-align:center;
+  position: fixed;
+  left: 47%;
+}
+
+input[id=key] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 20%;
+  background: #f1f1f1;
+  position: fixed;
+  left: 35%;
+}
+
+/* Style the submit button */
+button {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  position: fixed;
+  left: 55%;
+}
+
+button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+
+:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<title>{{page_title}}</title>
+</head>
+<body>
+
+<!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form action="oldnews" method="get">
+    <h1>Old News</h1>
+    <p>
+    Search for News from 30 days ago!<br>
+    <input type="text" placeholder="Search.." id="key" name="key">
+    <button type="submit"><i class="fa fa-search"></i></button>
+    <br /><br /><br />ADVANCED SEARCH<br>
+    <label for="language">Language:</label>
+    <input type="text" id="advance" name="language" /><br /><br /> ex: en, it, zh<br />
+    <br /><label for="size">Page size(1~100):</label>
+    <input type="text" id="advance" name="size" /><br /><br />
+    <br /><label for="sort">Sorted By:</label>
+    <input type="text" id="advance" name="sort" /> <br /><br />Options: relevancy, popularity, publishedAt<br />
+    </p>
+</form>
+{% if prompt %}
+<div class= 'formtitle'>{{prompt}}</div>
+{% endif %}
+</body>
+</html>

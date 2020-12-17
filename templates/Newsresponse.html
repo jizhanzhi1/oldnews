@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<style>
+body {
+  background-color: linen;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #666666;
+}
+
+div {
+    font-family: 'Roboto', sans-serif;
+}
+</style>
+<title>{{page_title}}</title>
+</head>
+<body>
+<p>
+    ---------------------------------------------------
+{% for g in mynews %}
+	<p><div class ='mynews'><br />{{g}}</div></p>
+{% endfor %}
+<a href='/'>Search for more news?</a>
+</p>
+</body>
+</html>
